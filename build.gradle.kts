@@ -18,6 +18,28 @@ configurations {
 	}
 }
 
+allprojects {
+	group = "com.myrecruit"
+	version = "0.0.1-SNAPSHOT"
+
+	tasks.withType<KotlinCompile> {
+		kotlinOptions {
+			freeCompilerArgs = listOf("-Xjsr305=strict")
+			jvmTarget = "11"
+		}
+	}
+
+	tasks.withType<Test> {
+		useJUnitPlatform()
+	}
+}
+
+subprojects {
+	repositories {
+		mavenCentral()
+	}
+}
+
 repositories {
 	mavenCentral()
 }
