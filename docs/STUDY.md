@@ -5,3 +5,7 @@
 * [spring-boot-gradle-multi-module](https://reflectoring.io/spring-boot-gradle-multi-module/)
 * [buckpal](https://github.com/thombergs/buckpal)
 * [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+
+* mockk
+* [Kotlin operator overloading](https://kotlinlang.org/docs/operator-overloading.html#comparison-operators)
+* [Kotest](https://kotest.io/docs/framework/writing-tests.html)
