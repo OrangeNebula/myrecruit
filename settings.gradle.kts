@@ -1,3 +1,5 @@
 rootProject.name = "myrecruit"
-include("application-core")
-include("api")
+
+include(
+    "application-core",
+)

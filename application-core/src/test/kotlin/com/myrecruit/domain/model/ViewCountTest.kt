@@ -1,4 +1,4 @@
-package com.myrecruit.domain
+package com.myrecruit.domain.model
 
 import com.myrecruit.domain.model.ViewCount
 import io.kotest.core.spec.style.FunSpec
