@@ -1,4 +1,4 @@
-package com.myrecruit.adapter.output.Entity
+package com.myrecruit.adapter.output.entity
 
 import javax.persistence.Entity
 

@@ -1,4 +1,4 @@
-package com.myrecruit.domain.model
+package com.myrecruit.domain
 
 data class ViewCount(val count: Int = 0) {
     operator fun plus(vc: ViewCount): ViewCount {

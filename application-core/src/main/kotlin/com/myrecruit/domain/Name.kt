@@ -1,4 +1,4 @@
-package com.myrecruit.domain.model
+package com.myrecruit.domain
 
 import java.util.*
 

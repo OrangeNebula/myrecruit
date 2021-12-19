@@ -1,7 +1,11 @@
 package com.myrecruit.application.port.input
 
-import com.myrecruit.domain.model.JobPosition
+import com.myrecruit.domain.JobPosition
 
 interface RegisterNewJobPositionPort {
-    fun registerNewJobPosition(jobPosition: JobPosition): JobPosition
+    fun registerNewJobPosition(
+        recruiterId: Long,
+        jobPositionName: String,
+        jobPositionDescription: String,
+    ): JobPosition
 }

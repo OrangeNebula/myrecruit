@@ -1,6 +1,6 @@
-package com.myrecruit.domain.model
+package com.myrecruit.domain
 
-import com.myrecruit.domain.model.ViewCount
+import com.myrecruit.domain.ViewCount
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 
