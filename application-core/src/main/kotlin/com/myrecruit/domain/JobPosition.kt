@@ -5,5 +5,6 @@ data class JobPosition(
     val name: String,
     val description: String,
     val createRecruiterId: Long,
+    val open: Boolean,
 ) {
 }

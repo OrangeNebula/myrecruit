@@ -14,4 +14,6 @@ open class JobPositionEntity(
     val description: String,
 
     val createRecruiterId: Long,
+
+    val open: Boolean,
 )

@@ -2,6 +2,7 @@ package com.myrecruit.application.service
 
 import com.myrecruit.application.port.output.GetRecruiterPort
 import com.myrecruit.application.port.output.SaveJobPositionPort
+import com.myrecruit.application.port.output.UpdateJobPositionPort
 import com.myrecruit.domain.JobPosition
 import com.myrecruit.domain.Recruiter
 import io.kotest.core.spec.style.FunSpec
@@ -13,6 +14,7 @@ import io.mockk.slot
 internal class JobPositionServiceTest : FunSpec({
     val getRecruiterPort: GetRecruiterPort = mockk()
     val saveJobPositionPort: SaveJobPositionPort = mockk()
+    val updateJobPositionPort: UpdateJobPositionPort = mockk()
     val jobPositionService: JobPositionService = JobPositionService(
         getRecruiterPort,
         saveJobPositionPort,
@@ -35,5 +37,31 @@ internal class JobPositionServiceTest : FunSpec({
         jobPosition.createRecruiterId shouldBe 0
         jobPosition.name shouldBe "백엔드"
         jobPosition.description shouldBe "채용"
+    }
+
+    test("채용담당자 id 와 포지션 id 를 전달받아, 포지션을 오픈할 수 있다.") {
+        val slot = slot<JobPosition>()
+        every {
+            updateJobPositionPort.updateJobPosition(capture(slot))
+        } returnsArgument 0
+
+        val jobPosition = getCloseJobPositionFixture()
+
+        jobPositionService.openJobPosition(jobPosition.createRecruiterId, jobPosition.id)
+
+        jobPosition.open shouldBe true
+    }
+
+    test("채용담당자 id 와 포지션 id 를 전달받아, 포지션을 닫을 수 있다.") {
+        val slot = slot<JobPosition>()
+        every {
+            updateJobPositionPort.updateJobPosition(capture(slot))
+        } returnsArgument 0
+
+        val jobPosition = getOpenJobPositionFixture()
+
+        jobPositionService.closeJobPosition(jobPosition.createRecruiterId, jobPosition.id)
+
+        jobPosition.open shouldBe false
     }
 })
