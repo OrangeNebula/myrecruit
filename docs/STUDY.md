@@ -9,3 +9,5 @@
 * mockk
 * [Kotlin operator overloading](https://kotlinlang.org/docs/operator-overloading.html#comparison-operators)
 * [Kotest](https://kotest.io/docs/framework/writing-tests.html)
+
+* [jpa 레퍼런스 번역](https://arahansa.github.io/docs_spring/jpa.html)

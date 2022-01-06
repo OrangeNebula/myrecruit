@@ -8,7 +8,8 @@ class Recruiter(
         jobPositionId: Long,
         name: String,
         description: String,
+        open: Boolean = true,
     ): JobPosition {
-        return JobPosition(jobPositionId, name, description, this.id)
+        return JobPosition(jobPositionId, name, description, this.id, open)
     }
 }
