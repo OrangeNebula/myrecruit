@@ -11,16 +11,10 @@ import org.springframework.stereotype.Component
 class JobPositionPersistenceAdapter(
     val mapper: JobPositionMapper,
     val repository: JobPositionRepository,
-) : SaveJobPositionPort, UpdateJobPositionPort, FindJobPositionPort {
+) : SaveJobPositionPort, FindJobPositionPort {
     override fun saveJobPosition(jobPosition: JobPosition): JobPosition {
         val jobPositionEntity = this.mapper.toJpaEntity(jobPosition)
         this.repository.save(jobPositionEntity)
-        return jobPosition
-    }
-
-    override fun updateJobPosition(jobPosition: JobPosition): JobPosition {
-        val jobPositionEntity = this.mapper.toJpaEntity(jobPosition)
-        this.repository.save(jobPositionEntity);
         return jobPosition
     }
 
