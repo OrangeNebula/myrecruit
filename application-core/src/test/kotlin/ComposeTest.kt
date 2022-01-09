@@ -23,9 +23,4 @@ class ComposeTest : FunSpec({
 
         case1 shouldBe 17
     }
-
-    test("함수 파라미터를 이용하여 함수 합성을 할 수 있다.") {
-        // fun<T> sumOf(a: T, b: T): T
-    }
-
 })
